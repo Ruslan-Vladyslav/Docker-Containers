@@ -1,8 +1,6 @@
-FROM python:3.10-alpine
+FROM python:3.10-buster
 
 WORKDIR /app
-
-RUN apk add --no-cache musl-dev g++ gcc lapack-dev
 
 COPY requirements/backend.txt .
 

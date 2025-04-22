@@ -1,7 +1,8 @@
-#FROM python:3.10-slim
 FROM python:3.10-alpine
 
 WORKDIR /app
+
+RUN apk add --no-cache musl-dev g++ gcc lapack-dev
 
 COPY requirements/backend.txt .
 
